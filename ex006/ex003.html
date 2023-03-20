@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #74a3b3;
+            color: white;
+            font: normal 18pt arial;
+
+        }   
+
+    </style>
+
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, odio.</p>
+
+    <script>
+
+        var n1 = Number.parseFloat(window.prompt('Digite um número')) //String
+        var n2 = Number.parseFloat(window.prompt('Digite outro número')) //String
+        // Number(n1)
+        // Number(n2)
+
+
+        //Os prompt retornam uma string, mesmo que eu digite um número
+
+        var soma = n1 + n2 //Nessa linha de código eu estou concatenando os dois números, e não somando eles.
+
+
+        //Transformando o número em uma string de duas formas:
+        window.alert('A soma dos dois números foi de: ' + String(soma) + '?')
+
+        
+        window.alert('A soma dos dois números foi de: ' + soma.toString() + '?')
+
+        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${soma}`)
+
+
+    </script>
+
+</body>
+</html>
