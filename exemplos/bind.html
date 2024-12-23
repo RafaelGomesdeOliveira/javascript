@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Carro() {
+            let teste = 'Rafael'
+            console.log(this.categoria)
+            console.log(teste)
+        }
+
+        let detalhes = {
+            categoria: "Esporte", 
+            preco: "110000.00", 
+            modelo: "Golf GTI",
+        }
+
+        let CarroDetalhes = Carro.bind(detalhes)
+        Carro()
+        CarroDetalhes()
+
+    </script>
+</body>
+</html>

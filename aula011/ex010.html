@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    A velocidade do carro é de <input type="number" name="km" id="km"> Km/H
+    <input type="button" id="calc" value="Calcular">
+    <div id="divRes">
+        <p>Teste</p>
+
+    </div>
+
+    <script>
+        var button = window.document.getElementById('calc')
+        button.addEventListener('click', calcular)
+
+        function calcular (){
+            var input = window.document.getElementById('km')
+            var vel = Number(input.value)
+
+            var divRes = document.getElementById('divRes')
+
+            var pRes = document.createElement('p')
+
+            divRes.appendChild(pRes)
+        
+
+            if (vel > 60){
+                pRes.innerHTML = `Você <strong>foi multado</strong> porque sua velocidade de ${vel} Km/H é superior a 60 Km/h`
+            } else {
+                pRes.innerHTML = `Você <strong>não foi multado</strong> porque a sua velocidade de ${vel} Km/H é igual ou inferior a 60 Km/H`
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+
+        }
+
+    </style>
+
 </head>
 <body>
 
@@ -13,7 +23,14 @@
     <script>
         var nome = window.prompt('Qual o seu nome?')
 
-        document.writeln(`Olá, ${nome}, seu nome tem ${nome.length} letras<br>`)
+        var salario = 1543.5
+     
+        window.alert(salario.toFixed(2).replace('.', ','))
+        window.alert(salario.toLocaleString('pt-BR', {sytle: 'currency',currency: 'BRL'}))
+
+
+
+        document.write(`Olá, <strong>${nome}</strong> nome tem ${nome.length} letras<br>`)
         document.writeln(`Seu nome em maiúsculo é ${nome.toUpperCase()} <br>`)
         document.writeln(`Seu nome em minúsculo é ${nome.toLowerCase()}`)
 

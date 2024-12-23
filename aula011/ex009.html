@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o seu pais <input type="text" name="pais" id="pais">
+
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var pais = document.getElementById('pais').value
+
+            alert(typeof(pais))
+
+            var div = document.getElementById('res')
+            // var pais = text.value
+            
+
+
+            
+
+            if (pais != "Brasil" && pais != "brasil") {
+                div.innerHTML += '<p> Você é <strong>Estrangeiro</strong> </p>'
+            } else {
+                div.innerHTML += '<p> Você é <strong>Brasileiro</strong> </p>'
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

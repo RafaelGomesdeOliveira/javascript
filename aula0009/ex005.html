@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(69, 93, 101);
+            color: white;
+            font-size: 18;
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando os estudos de DOM (Document Object Model)</h1>
+    <p name="msg">Aqui vai o resultado</p>
+    <p>Aprendendo <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique aqui</div>
+    <div class="inf">Div com class</div>
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[1] 
+        var corpo = document.body
+        
+        corpo.style.fontWeight = "bold"
+
+        window.document.writeln("Está escrito assim: " + p1.innerHTML + `<br>`)
+        window.document.writeln("Está escrito assim: " + p1.innerText)
+
+        p1.style.color = "red"
+        var divMSG = document.getElementById('msg')
+
+        divMSG.style.color = 'blue'; divMSG.style.backgroundColor = 'lightblue'
+
+        var pNAME = document.getElementsByName('msg')[0] //Quando tiver o s em ElementS eu preciso informar o indice que eu desejo acessar
+
+        pNAME.innerText = 'Alterei usando o JS'
+
+
+
+        var DIVmsg = document.querySelector('div#msg')
+        var divClass = document.querySelector('div.inf');
+
+        const ul = document.createElement('ul')
+        
+        const tarefas = [
+            'Estudar JS',
+            'Beber água',
+            'Ir em madrinha'
+        ]
+
+
+        for (var tarefa of tarefas) {
+            const item = document.createElement('li') //Crio o item
+            item.innerText = tarefa //Fala qual texto esse item terá
+            ul.appendChild(item) //Associo esse item ao ul que eu criei anteriormente
+
+        }
+        divClass.appendChild(ul) //Associo o ul que eu criei com o div que tem a class inf
+
+        // document.querySelector('strong').style.color = 'blue'
+
+        // divClass.innerText += " com informações adicionadas via JS"
+        // divClass.style.color = 'lightblue'
+
+        // DIVmsg.innerText += " adicionei um texto"
+        
+
+
+    </script>
+
+</body>
+</html>

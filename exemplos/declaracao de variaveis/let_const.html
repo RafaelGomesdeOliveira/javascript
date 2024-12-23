@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    aqui
+
+    <script>
+
+
+        for (let i = 0; i < 10; i++) { // É bom usar o let pq ele só vai existir enquanto eu estiver rodando esse loop
+
+        }
+        const MY_FAV = 7;
+
+        // isto falha mas não emite erros no Firefox e Chrome (porém não falha no Safari)
+        // var MY_FAV = 20; // Falha pq já tem uma constante com esse nome
+
+        // a variável MY_FAV possui o valor 7
+        console.log("my favorite number is: " + MY_FAV);
+        if (MY_FAV === 7) {
+            // não tem problema fazer isso, pois cria uma variável de bloco MY_FAV
+            // com escopo local (o nome MY_FAV poderia ser usado com let também)
+            let MY_FAV = 20;
+
+            // MY_FAV agora é 20
+            console.log("meu número favorito é " + MY_FAV);
+
+            // isso retorna um erro, pois tenta registrar a variável no contexto global
+            // var MY_FAV = 20;
+        }
+
+    </script>
+
+
+</body>
+
+</html> 

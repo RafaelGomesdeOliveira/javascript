@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario, .lista-produtos {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.formulario h2, .lista-produtos h2 {
+    margin-bottom: 20px;
+}
+
+#produto-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#produto-form label {
+    margin-top: 10px;
+}
+
+#produto-form input, #produto-form select {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#produto-form button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: #f2f2f2;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.botao-editar, .botao-excluir {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+.botao-editar {
+    background-color: #4CAF50;
+}
+
+.botao-excluir {
+    background-color: #f44336;
+}

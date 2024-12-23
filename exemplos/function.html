@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    aqui
+
+    <script> 
+        var nome = 'Rafael'
+        const metade = (nome) => {
+            window.alert(`Seu nome é ${nome}`)
+            
+        }
+
+        metade()
+
+
+        function soma (n1 = 0, n2 = 0 ){
+            let resultado = n1 + n2
+
+            return resultado
+        }
+
+        const res = soma(30, 10)
+        alert(res)
+
+        const estaEndividade = (receita, gastos) => receita > gastos ? 'Está no azul' : 'Está no vermelho'
+
+        const maria = estaEndividade(2000, 7000)
+        const rafael = estaEndividade(10000, 4000)
+
+        alert(maria)
+        alert(rafael)
+
+        const digaMeuNome = () => {
+            alert("Pdin")
+
+        }
+
+        digaMeuNome()
+
+        console.log(this);
+        
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quad {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body onload="girar()">
+    <div id="quad">
+
+    </div>
+
+    <script>
+        let angulo = 0
+        function girar(){
+            let div = document.getElementById('quad')
+
+            div.style.transform = `rotate(${angulo}deg)`
+            angulo++
+            
+            if (angulo == 360){
+                angulo = 0
+            }
+        }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

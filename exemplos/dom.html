@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        // Seleciona o elemento onde a estrutura será inserida
+        const container = document.getElementById("container");
+
+        // Cria um título para a lista
+        const titulo = document.createElement("h2");
+        titulo.innerText = "Lista de Tarefas";
+
+        // Cria um elemento de lista não ordenada (ul)
+        const lista = document.createElement("ul");
+
+        // Array de tarefas (exemplo)
+        const tarefas = ["Comprar leite", "Enviar e-mail", "Estudar JavaScript"];
+
+        // Loop para criar itens da lista e adicionar ao elemento 'ul'
+        tarefas.forEach((tarefa) => {
+            const item = document.createElement("li"); // Cria um item de lista (li)
+            item.innerText = tarefa;                   // Define o texto do item
+            lista.appendChild(item);                    // Adiciona o item na lista (ul)
+        });
+
+        // Adiciona o título e a lista no contêiner principal
+        container.appendChild(titulo);
+        container.appendChild(lista);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>aqui</button>
+
+    <script>
+        var titulo = 'Antigo'
+
+
+        
+        let cidadao = {
+            nome: 'Pedro',
+            idade: 15,
+            falar: function (){
+                console.log('Eai, de boa?')
+            },
+            dizerNome: function (){
+                console.log(`Meu nome é ${this.nome}`) //Eu posso acessar e exibir o valor com o this
+
+            }, 
+            fazerAniversario: function() {
+                this.idade++ // Eu posso acessar e atribuir os valores com o this
+            },
+            saudacao: function() {
+                return "Sr " + this.nome
+            }, 
+            dizerIdade: () => {
+                return `A minha idade é de ${this.idade} anos, mas esse não funciona porque eu USEI o arrow funciton` // Não funciona porque ele pega o this global, ou seja, o objeto window
+            },
+            dizerIdade2: function() {
+                return `A minha idade é de ${this.idade} anos, mas esse funciona porque eu NÃO usei o arrow funciton`
+
+            }
+
+        }
+        
+        
+        cidadao.dizerNome();
+        console.log(cidadao.idade)
+
+        cidadao.fazerAniversario()
+
+        console.log(cidadao.idade)
+
+        let sdc = cidadao.dizerIdade()
+        console.log(sdc)
+
+
+        let sdc2 = cidadao.dizerIdade2()
+        console.log(sdc2)
+
+
+
+        document.querySelector("button").addEventListener("click", function () {
+            console.log(this); // O botão clicado
+        });
+
+
+    </script>
+</body>
+
+</html>

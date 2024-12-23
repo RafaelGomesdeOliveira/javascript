@@ -24,22 +24,19 @@
 
         var n1 = Number.parseFloat(window.prompt('Digite um número')) //String
         var n2 = Number.parseFloat(window.prompt('Digite outro número')) //String
-        // Number(n1)
-        // Number(n2)
-
+        var n3 = Number(window.prompt('Digite outro número')) //Decide pra qual converter 
 
         //Os prompt retornam uma string, mesmo que eu digite um número
 
-        var soma = n1 + n2 //Nessa linha de código eu estou concatenando os dois números, e não somando eles.
+        var soma = n1 + n2 + n3//Nessa linha de código eu estou concatenando os dois números, e não somando eles.
 
 
         //Transformando o número em uma string de duas formas:
         window.alert('A soma dos dois números foi de: ' + String(soma) + '?')
 
-        
-        window.alert('A soma dos dois números foi de: ' + soma.toString() + '?')
+        window.alert(`A xoma entre o ${n1}, ${n2} e ${n3} é igual a ${soma}!`)
 
-        window.alert(`A soma entre ${n1} e ${n2} é igual a: ${soma}`)
+
 
 
     </script>

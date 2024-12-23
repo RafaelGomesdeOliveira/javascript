@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Somando valores</h1>
+
+    <input type="number" name="inpN1" id="inpN1">
+
+    <input type="number" name="inpN2" id="inpN2">
+
+    <input type="button" id="but" value="Calcular">
+
+    <div id="res">Resultado</div>
+
+    <script>
+        var button = document.getElementById('but')
+        button.addEventListener('click', calcular)
+
+        function calcular() {
+            var inpN1 = document.getElementById('inpN1')
+            var inpN2 = document.getElementById('inpN2')
+
+            // window.alert(typeof(inpN1.value))
+
+            var n1 = Number(inpN1.value)
+            var n2 = Number(inpN2.value)
+
+            var soma = n1 + n2
+
+            var divRes = window.document.getElementById('res')
+
+            divRes.innerHTML = `O resultado da soma de ${n1} e ${n2} é igual a ${soma}`
+        }
+ 
+
+    </script>
+
+</body>
+</html>
